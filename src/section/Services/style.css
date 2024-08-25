@@ -1,0 +1,70 @@
+.services {
+  background: linear-gradient(180deg, rgb(234, 226, 212) 180%, rgb(255, 255, 255) 0%);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+.code_icon {
+  font-size: 40px !important;
+  transition: 0.5s;
+}
+.card:hover .code_icon {
+  color: #f5f5f5;
+}
+
+.card:hover .ingo {
+  transition: 0.5s;
+}
+.card:hover .ingo {
+  fill: var(--col);
+}
+
+/* Reset the counter in the container */
+.counter-container {
+  counter-reset: tamplate; /* Initialize the counter */
+}
+
+/* Increment the counter for each li */
+.counter {
+  /* background-color: rgb(0, 0, 0); */
+  padding: 10px;
+  counter-increment: tamplate;
+}
+
+/* Add the counter number before each li */
+.counter::before {
+  content: counter(tamplate) '. '; /* Display the counter with a dot and space */
+  /* color: white; Color of the counter number */
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+ol {
+  position: relative;
+  list-style: none; /* إزالة التنقيط من القائمة */
+  padding-left: 25px !important; /* تعديل المسافة من اليسار */
+  margin-left: 30px !important;
+}
+ol::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(30 58 138);
+}
+ol li {
+  position: relative;
+}
+ol li::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  left: -25px;
+  top: 50%;
+  background-color: rgb(30 58 138);
+}
